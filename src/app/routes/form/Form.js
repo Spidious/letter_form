@@ -1,4 +1,4 @@
-import { MultiChoice } from "../../../components/fields/Fields"
+import { MultiChoice, MultiSelect, ShortText } from "../../../components/fields/Fields"
 import "./Form.css";
 
 
@@ -11,7 +11,13 @@ export default function Form() {
                     March
                 </h1>
                 {/*  Form queries added here  */}
-                <MultiChoice title={"This is a test"} />
+                <MultiChoice
+                    title={"This is a Multiple Choice"}
+                />
+                <MultiSelect
+                    title={"This is a Multiple Select"}
+                />
+                <ShortText title={"This is a Short Answer"} />
             </div>
         </div>
     );
