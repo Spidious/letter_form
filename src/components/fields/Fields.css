@@ -3,3 +3,7 @@
     min-height: 100px;
     width: 90%;
 }
+
+.RadioOpt {
+    display: block;
+}

@@ -1,32 +1,43 @@
+import React from 'react';
 import "./Fields.css";
 
-export const MultiChoice = ({title, opts}) => {
+export const MultiChoice = ({title, opts = []}) => {
     return (
-        <div className="Field">
+        <form className="Field">
             <h3>
                 { title }
             </h3>
-            <form>
-                <label>
+            {opts.map((str, index) => (
+                <label className="RadioOpt">
                     <input
                         type="radio"
-                        name="opt1"
-                        value="test"
+                        name="radio_btn"
+                        value={ index }
                     />
-                    Testing Input Label
+                    { str }
                 </label>
-            </form>
-        </div>
+            ))}
+        </form>
     );
 };
 
-export const MultiSelect = ({title, opts}) => {
+export const MultiSelect = ({title, opts = []}) => {
     return (
-        <div className="Field">
+        <form className="Field">
             <h3>
                 { title }
             </h3>
-        </div>
+            {opts.map((str, index) => (
+                <label className="RadioOpt">
+                    <input
+                        type="checkbox"
+                        name="radio_btn"
+                        value={ index }
+                    />
+                    { str }
+                </label>
+            ))}
+        </form>
     );
 };
 

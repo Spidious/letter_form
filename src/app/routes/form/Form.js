@@ -13,9 +13,15 @@ export default function Form() {
                 {/*  Form queries added here  */}
                 <MultiChoice
                     title={"This is a Multiple Choice"}
+                    opts={["1", "2", "3"]}
+                />
+                <MultiChoice
+                    title={"This is another Multiple Choice"}
+                    opts={["4", "5", "6"]}
                 />
                 <MultiSelect
                     title={"This is a Multiple Select"}
+                    opts={["7", "8", "9"]}
                 />
                 <ShortText title={"This is a Short Answer"} />
             </div>
