@@ -7,3 +7,20 @@
 .RadioOpt {
     display: block;
 }
+
+.TextBox {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-bottom: 1px solid black;
+}
+.TextBox:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.FieldWarning {
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    color: red;
+}

@@ -1,30 +1,47 @@
-import { MultiChoice, MultiSelect, ShortText } from "../../../components/fields/Fields"
+import { MultiChoice, ShortText, DateText } from "../../../components/fields/Fields"
 import "./Form.css";
 
 
 export default function Form() {
     return (
         <div className="form-background container-flex">
-            <div className="form-wrapper container-flex">
+            <form className="form-wrapper container-flex">
                 <h1>
                     {/* Form title */}
                     March
                 </h1>
-                {/*  Form queries added here  */}
                 <MultiChoice
-                    title={"This is a Multiple Choice"}
-                    opts={["1", "2", "3"]}
+                    id={1}
+                    required={true}
+                    title="What would you prefer to receive?"
+                    opts={[
+                        "Just the letter",
+                        "The whole package",
+                    ]}
                 />
                 <MultiChoice
-                    title={"This is another Multiple Choice"}
-                    opts={["4", "5", "6"]}
+                    id={2}
+                    required={true}
+                    title="Who do you think would win?"
+                    opts={[
+                        "Shadow the hedgehog",
+                        "1000 normal hedgehogs",
+                    ]}
                 />
-                <MultiSelect
-                    title={"This is a Multiple Select"}
-                    opts={["7", "8", "9"]}
+                <ShortText
+                    id={3}
+                    title="Any life updates you want included?"
                 />
-                <ShortText title={"This is a Short Answer"} />
-            </div>
+                <DateText
+                    id={4}
+                    required={true}
+                    title="When is your birthday?"
+                />
+                <ShortText
+                    id={5}
+                    title="Anything else I should know?"
+                />
+            </form>
         </div>
     );
 }
